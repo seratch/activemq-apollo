@@ -79,7 +79,7 @@
     <howl-version>0.1.8</howl-version>
     <hsqldb-version>1.7.2.2</hsqldb-version>
     <jdom-version>1.0</jdom-version>
-    <jetty-version>8.1.5.v20120716</jetty-version>
+    <jetty-version>8.1.17.v20150415</jetty-version>
     <jmock-version>1.0.1</jmock-version>
     <junit-version>4.12</junit-version>
     <jxta-version>2.0</jxta-version>
@@ -112,8 +112,8 @@
     
     <bdb-version>5.0.34</bdb-version>
 
-    <leveldb-api-version>0.6</leveldb-api-version>
-    <leveldb-version>0.6</leveldb-version>
+    <leveldb-api-version>0.7</leveldb-api-version>
+    <leveldb-version>0.7</leveldb-version>
     <leveldbjni-version>1.8</leveldbjni-version>
 
     <jasypt-version>1.9.2</jasypt-version>
@@ -122,12 +122,12 @@
     <scalamd-version>1.6.1</scalamd-version>
 
     <servlet-api-version>3.0.0.v201112011016</servlet-api-version>
-    <jackson-version>2.1.0</jackson-version>
-    <logback-version>0.9.24</logback-version>
-    <jersey-version>1.7</jersey-version>
+    <jackson-version>2.5.4</jackson-version>
+    <logback-version>1.1.3</logback-version>
+    <jersey-version>1.19</jersey-version>
     <snakeyaml-version>1.15</snakeyaml-version>
     <swagger-version>1.2.0</swagger-version>
-    <jolokia-version>1.1.1</jolokia-version>
+    <jolokia-version>1.3.1</jolokia-version>
 
     <selenium-version>2.33.0</selenium-version>
       

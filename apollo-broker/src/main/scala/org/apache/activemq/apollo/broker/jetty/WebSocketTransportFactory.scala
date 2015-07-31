@@ -111,7 +111,8 @@ object WebSocketTransportFactory extends TransportFactory.Provider with Log {
 
         // Explicitly set the Jetty Log impl to avoid
         // the NPE raised at https://issues.apache.org/jira/browse/APLO-264
-        org.eclipse.jetty.util.log.Log.setLog(new Slf4jLog());
+        // TODO: fix java.lang.NoClassDefFoundError: org/slf4j/Logger
+        // org.eclipse.jetty.util.log.Log.setLog(new Slf4jLog());
 
         IntrospectionSupport.setProperties(this, URISupport.parseParamters(uri));
 
@@ -166,7 +167,7 @@ object WebSocketTransportFactory extends TransportFactory.Provider with Log {
         connector.setHost(host)
         connector.setPort(port)
 
-        var context = new ServletContextHandler(ServletContextHandler.NO_SECURITY)
+        val context = new ServletContextHandler(ServletContextHandler.NO_SECURITY)
         context.setContextPath(prefix)
 
         if( cors_origin!=null && !cors_origin.trim().isEmpty ) {

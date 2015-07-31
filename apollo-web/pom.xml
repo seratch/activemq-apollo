@@ -55,7 +55,7 @@
     <!-- Web Framework APIs -->
     <dependency>
       <groupId>org.scalatra.scalate</groupId>
-      <artifactId>scalate-core_2.10</artifactId>
+      <artifactId>scalate-core_${scala-binary-version}</artifactId>
       <version>${scalate-version}</version>
     </dependency>
     <dependency>
@@ -117,7 +117,7 @@
     <!-- Testing -->
     <dependency>
       <groupId>org.scalatra.scalate</groupId>
-      <artifactId>scalate-test_2.10</artifactId>
+      <artifactId>scalate-test_${scala-binary-version}</artifactId>
       <version>${scalate-version}</version>
       <scope>test</scope>
       <exclusions>
@@ -204,7 +204,7 @@
 
       <plugin>
         <groupId>org.scalatra.scalate</groupId>
-        <artifactId>maven-scalate-plugin_2.10</artifactId>
+        <artifactId>maven-scalate-plugin_${scala-binary-version}</artifactId>
         <version>${scalate-version}</version>
         <executions>
           <execution>

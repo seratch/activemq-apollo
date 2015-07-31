@@ -28,15 +28,16 @@ import org.eclipse.jetty.server.ssl.SslSelectChannelConnector
 import javax.net.ssl.SSLContext
 import org.eclipse.jetty.util.thread.ExecutorThreadPool
 import org.apache.activemq.apollo.dto.WebAdminDTO
-import java.net.{URL, URI}
+import java.net.URI
 import java.io.{FileOutputStream, File}
 import java.util.jar.JarInputStream
-import java.lang.String
-import org.eclipse.jetty.servlet.{FilterMapping, FilterHolder}
+import org.eclipse.jetty.servlet.FilterHolder
 import org.apache.activemq.apollo.broker.web.{AllowAnyOriginFilter, WebServer, WebServerFactory}
 import javax.servlet._
 import org.eclipse.jetty.util.log.Slf4jLog
 import java.util
+
+import scala.util.control.NonFatal
 
 /**
  * <p>
@@ -51,7 +52,7 @@ object JettyWebServerFactory extends WebServerFactory {
     this.getClass.getClassLoader.loadClass(classOf[WebAppContext].getName)
     true
   } catch {
-    case _:Throwable =>
+    case NonFatal(_) =>
     false
   }
 
@@ -159,16 +160,17 @@ class JettyWebServer(val broker:Broker) extends WebServer with BaseService {
 
       // Explicitly set the Jetty Log impl to avoid
       // the NPE raised at https://issues.apache.org/jira/browse/APLO-264
-      org.eclipse.jetty.util.log.Log.setLog(new Slf4jLog());
+      // TODO: fix java.lang.NoClassDefFoundError: org/slf4j/Logger
+      // org.eclipse.jetty.util.log.Log.setLog(new Slf4jLog())
 
       val config = broker.config
 
       val webapp_path = webapp(broker.tmp)
       if(webapp_path==null ) {
-        warn("Administration interface cannot be started: webapp resources not found");
+        warn("Administration interface cannot be started: webapp resources not found")
       } else {
         // Start up the admin interface...
-        debug("Starting administration interface");
+        debug("Starting administration interface")
 
         if( broker.tmp !=null ) {
           System.setProperty("scalate.workdir", (broker.tmp / "scalate").getCanonicalPath )

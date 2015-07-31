@@ -98,7 +98,6 @@
       <groupId>org.eclipse.jetty.aggregate</groupId>
       <artifactId>jetty-all-server</artifactId>
       <version>${jetty-version}</version>
-      <optional>true</optional>
     </dependency>
 
     <!-- -->

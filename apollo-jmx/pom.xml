@@ -123,7 +123,7 @@
 
       <plugin>
         <groupId>org.scalatra.scalate</groupId>
-        <artifactId>maven-scalate-plugin_2.10</artifactId>
+        <artifactId>maven-scalate-plugin_${scala-binary-version}</artifactId>
         <version>${scalate-version}</version>
         <executions>
           <execution>
