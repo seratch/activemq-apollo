@@ -1,4 +1,11 @@
-# The Apollo Project
+# A fork of The Apollo Project
+
+This project is a fork of Apache ActiveMQ Apollo project 1.7.1. The following improvements are applied.
+
+- Bump Scala lang version to 2.11.x
+- Bump slf4j-api version to 1.7.x
+
+groupId is `com.github.seratch` but other things are the same as the original project.
 
 ## Synopsis
 
