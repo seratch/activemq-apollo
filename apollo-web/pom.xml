@@ -19,13 +19,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.apache.activemq</groupId>
+    <groupId>com.github.seratch</groupId>
     <artifactId>apollo-scala</artifactId>
     <version>${apollo-version}</version>
     <relativePath>../apollo-scala</relativePath>
   </parent>
 
-  <groupId>org.apache.activemq</groupId>
+  <groupId>com.github.seratch</groupId>
   <artifactId>apollo-web</artifactId>
   <packaging>jar</packaging>
   <version>${apollo-version}</version>
@@ -42,12 +42,12 @@
     
     <!-- Core Dependency -->
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-broker</artifactId>
       <version>${apollo-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-util</artifactId>
       <version>${apollo-version}</version>
     </dependency>
@@ -215,7 +215,7 @@
               <templates>
                 <template>/WEB-INF/scalate/errors/500.scaml</template>
               </templates>
-              <bootClassName>org.apache.activemq.apollo.web.Boot</bootClassName>
+              <bootClassName>com.github.seratch.apollo.web.Boot</bootClassName>
             </configuration>
           </execution>
         </executions>
@@ -234,7 +234,7 @@
               <goal>jar</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/target/classes/META-INF/services/org.apache.activemq.apollo</outputDirectory>
+              <outputDirectory>${basedir}/target/classes/META-INF/services/com.github.seratch.apollo</outputDirectory>
               <finalName>webapp</finalName>
               <classesDirectory>${basedir}/src/main/webapp</classesDirectory>
               <classifier>resources</classifier>

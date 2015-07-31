@@ -43,7 +43,7 @@
       <version>1.1</version>
     </dependency>
       <dependency>
-          <groupId>org.apache.activemq</groupId>
+          <groupId>com.github.seratch</groupId>
           <artifactId>activemq-core</artifactId>
           <version>${activemq.version}</version>
       </dependency>

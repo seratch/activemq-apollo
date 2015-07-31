@@ -29,22 +29,22 @@
   <dependencies>
     
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-broker</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-stomp</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-leveldb</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-web</artifactId>
       <version>${project.version}</version>
     </dependency>

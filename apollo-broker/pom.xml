@@ -20,13 +20,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.apache.activemq</groupId>
+    <groupId>com.github.seratch</groupId>
     <artifactId>apollo-scala</artifactId>
     <version>${apollo-version}</version>
     <relativePath>../apollo-scala</relativePath>
   </parent>
 
-  <groupId>org.apache.activemq</groupId>
+  <groupId>com.github.seratch</groupId>
   <artifactId>apollo-broker</artifactId>
   <version>${apollo-version}</version>
   <!--<packaging>bundle</packaging>-->
@@ -40,13 +40,13 @@
   <dependencies>
   
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-dto</artifactId>
       <version>${apollo-version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-selector</artifactId>
       <version>${apollo-version}</version>
     </dependency>
@@ -120,7 +120,7 @@
     </dependency>
     
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-util</artifactId>
       <scope>compile</scope>
       <version>${apollo-version}</version>
@@ -216,7 +216,7 @@
                   <version>1.9</version>
                   <classifier>bin</classifier>
                   <type>exe</type>
-                  <outputDirectory>${basedir}/target/classes/org/apache/activemq/apollo/broker/bin</outputDirectory>
+                  <outputDirectory>${basedir}/target/classes/com.github.seratch/apollo/broker/bin</outputDirectory>
                   <destFileName>apollo-broker-service.exe</destFileName>
                 </artifactItem>
               </artifactItems>

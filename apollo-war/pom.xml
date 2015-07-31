@@ -19,13 +19,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.apache.activemq</groupId>
+    <groupId>com.github.seratch</groupId>
     <artifactId>apollo-scala</artifactId>
     <version>${apollo-version}</version>
     <relativePath>../apollo-scala</relativePath>
   </parent>
 
-  <groupId>org.apache.activemq</groupId>
+  <groupId>com.github.seratch</groupId>
   <artifactId>apollo-war</artifactId>
   <packaging>war</packaging>
   <version>${apollo-version}</version>
@@ -48,18 +48,18 @@
     </dependency>
     
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-broker</artifactId>
       <version>${apollo-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-cli</artifactId>
       <version>${apollo-version}</version>
     </dependency>
 
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-leveldb</artifactId>
       <version>${apollo-version}</version>
     </dependency>
@@ -77,40 +77,40 @@
     </dependency>    
     
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-bdb</artifactId>
       <version>${apollo-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-stomp</artifactId>
       <version>${apollo-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-openwire</artifactId>
       <version>${apollo-version}</version>
     </dependency> 
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-mqtt</artifactId>
       <version>${apollo-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-amqp</artifactId>
       <version>${apollo-version}</version>
     </dependency>
     
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-web</artifactId>
       <version>${apollo-version}</version>
       <classifier>classes</classifier>
     </dependency>
     
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-jmx</artifactId>
       <version>${apollo-version}</version>
     </dependency>
@@ -174,7 +174,7 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.apache.activemq</groupId>
+                  <groupId>com.github.seratch</groupId>
                   <artifactId>apollo-web</artifactId>
                   <version>${apollo-version}</version>
                   <classifier>resources</classifier>

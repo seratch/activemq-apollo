@@ -18,13 +18,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.apache.activemq</groupId>
+    <groupId>com.github.seratch</groupId>
     <artifactId>apollo-scala</artifactId>
     <version>${apollo-version}</version>
     <relativePath>../apollo-scala</relativePath>
   </parent>
 
-  <groupId>org.apache.activemq</groupId>
+  <groupId>com.github.seratch</groupId>
   <artifactId>apollo-openwire</artifactId>
   <version>${apollo-version}</version>
 
@@ -39,18 +39,18 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-broker</artifactId>
       <version>${apollo-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-web</artifactId>
       <version>${apollo-version}</version>
       <optional>true</optional>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-util</artifactId>
       <version>${apollo-version}</version>
     </dependency>
@@ -89,13 +89,13 @@
 
     <!-- so we can test against a persisentce store -->
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-bdb</artifactId>
       <version>${apollo-version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-leveldb</artifactId>
       <version>${apollo-version}</version>
       <scope>test</scope>
@@ -128,7 +128,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.apache.activemq</groupId>
+      <groupId>com.github.seratch</groupId>
       <artifactId>apollo-openwire-generator</artifactId>
       <version>${project.version}</version>
     </dependency>
