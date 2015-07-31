@@ -54,7 +54,7 @@ class StoreImport extends BaseAction {
       }
 
       if( !conf.exists ) {
-        error("Configuration file'%s' does not exist.\n\nTry creating a broker instance using the 'apollo create' command.".format(conf));
+        sys.error("Configuration file'%s' does not exist.\n\nTry creating a broker instance using the 'apollo create' command.".format(conf));
       }
 
       val config = ConfigStore.load(conf, out.println _)
@@ -66,32 +66,32 @@ class StoreImport extends BaseAction {
         hosts.filter( _.id == host ).headOption
       }
 
-      val vh = vho.getOrElse(error("Could find host to export"))
+      val vh = vho.getOrElse(sys.error("Could find host to export"))
       if( vh.store == null ) {
-        error("The virtual host '%s' does not have a store configured.".format(vh.id))
+        sys.error("The virtual host '%s' does not have a store configured.".format(vh.id))
       }
 
       val store = StoreFactory.create(vh.store)
       if( store==null ) {
-        error("Could not create the store.")
+        sys.error("Could not create the store.")
       }
 
-      out.println("Starting store: "+store)
+      println("Starting store: " + store)
       ServiceControl.start(store, "store startup")
 
-      out.println("Importing: "+file)
+      println("Importing: "+file)
       using( new BufferedInputStream(new FileInputStream(file)) ) { is =>
         sync_cb[scala.Option[String]] { cb =>
           store.import_data(is, cb)
-        }.foreach(error _)
+        }.foreach(sys.error _)
       }
 
       ServiceControl.stop(store, "store stop");
-      out.println("Done.")
+      println("Done.")
       0
     } catch {
       case x:Helper.Failure=>
-        error(x.getMessage)
+        sys.error(x.getMessage)
         1
     }
   }

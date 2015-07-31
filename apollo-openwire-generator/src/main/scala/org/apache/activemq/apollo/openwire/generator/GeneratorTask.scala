@@ -25,7 +25,7 @@ import org.codehaus.jam.JamService
 import org.codehaus.jam.JamServiceFactory
 import org.codehaus.jam.JamServiceParams
 import org.apache.activemq.openwire.tool.{JavaTestsGenerator, JavaMarshallingGenerator}
-import reflect.BeanProperty
+import scala.beans.BeanProperty
 
 
 /**

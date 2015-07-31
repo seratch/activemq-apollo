@@ -16,8 +16,7 @@
  */
 package org.apache.activemq.apollo.broker
 
-import _root_.java.io.File
-import _root_.java.lang.String
+import java.io.File
 import org.fusesource.hawtdispatch._
 import org.fusesource.hawtbuf._
 import collection.JavaConversions
@@ -34,7 +33,7 @@ import org.apache.activemq.apollo.dto._
 import javax.management.ObjectName
 import org.fusesource.hawtdispatch.TaskTracker._
 import java.util.concurrent.TimeUnit._
-import reflect.BeanProperty
+import scala.beans.BeanProperty
 import java.net.InetSocketAddress
 import org.fusesource.hawtdispatch.util.BufferPools
 import org.apache.activemq.apollo.filter.{Filterable, XPathExpression, XalanXPathEvaluator}

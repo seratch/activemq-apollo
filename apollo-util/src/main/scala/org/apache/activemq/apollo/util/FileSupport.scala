@@ -16,9 +16,11 @@
  */
 package org.apache.activemq.apollo.util
 
+import scala.language.implicitConversions
+
 import java.io._
 import org.fusesource.hawtdispatch._
-import language.implicitConversions
+import scala.util.control._
 
 object FileSupport {
 
@@ -165,7 +167,7 @@ object ProcessSupport {
               FileSupport.copy(in, out)
             }
           } catch {
-            case _ =>
+            case NonFatal(_) =>
           }
         }
       } else {
@@ -179,7 +181,7 @@ object ProcessSupport {
               FileSupport.copy(in, out)
             }
           } catch {
-            case _ =>
+            case NonFatal(_) =>
           }
         }
       } else {
@@ -193,7 +195,7 @@ object ProcessSupport {
               FileSupport.copy(in, err)
             }
           } catch {
-            case _ =>
+            case NonFatal(_) =>
           }
         }
       } else {

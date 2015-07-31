@@ -31,7 +31,6 @@ import org.apache.activemq.apollo.dto._
 import java.util.regex.Pattern
 import collection.mutable.ListBuffer
 import org.fusesource.hawtbuf.Buffer
-import org.apache.activemq.apollo.broker.{DeliveryResult, Subscription}
 
 object Queue extends Log {
   val subscription_counter = new AtomicInteger(0)

@@ -16,6 +16,8 @@
  */
 package org.apache.activemq.apollo.broker
 
+import scala.language.existentials
+
 import org.fusesource.hawtdispatch._
 import org.apache.activemq.apollo.util._
 import path._

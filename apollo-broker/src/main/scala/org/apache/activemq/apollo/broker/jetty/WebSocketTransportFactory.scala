@@ -30,7 +30,7 @@ import org.eclipse.jetty.websocket.{WebSocket, WebSocketServlet}
 import org.eclipse.jetty.server.{Connector, Server}
 import java.net.{URL, InetSocketAddress, URI}
 import java.lang.Class
-import scala.reflect.BeanProperty
+import scala.beans.BeanProperty
 import java.nio.ByteBuffer
 import java.nio.channels._
 import scala.collection.mutable.ListBuffer
@@ -192,7 +192,7 @@ object WebSocketTransportFactory extends TransportFactory.Provider with Log {
           try {
             server.stop
           } catch {
-            case ignore =>
+            case ignore: Throwable =>
           }
         }
         on_complete.run

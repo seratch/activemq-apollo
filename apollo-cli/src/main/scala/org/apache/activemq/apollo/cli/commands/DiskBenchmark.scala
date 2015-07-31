@@ -100,10 +100,10 @@ object DiskBenchmark {
     val mbean_server = ManagementFactory.getPlatformMBeanServer()
     mbean_server.getAttribute(new ObjectName("java.lang:type=OperatingSystem"), "TotalPhysicalMemorySize") match {
       case x:java.lang.Long=> Some(x.longValue)
-      case _ => None
+      case _: Throwable => None
     }
   } catch {
-    case _ => None
+    case _: Throwable => None
   }).getOrElse(1024*1024*500L))
 
 }

@@ -17,7 +17,7 @@
 package org.apache.activemq.apollo.broker.security
 
 import javax.security.auth.callback.Callback
-import reflect.BeanProperty
+import scala.beans.BeanProperty
 import java.net.SocketAddress
 
 /**

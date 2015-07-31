@@ -19,7 +19,6 @@ package org.apache.activemq.apollo.broker
 import java.io._
 import org.apache.activemq.apollo.util.FileSupport._
 import java.util.regex.{Pattern, Matcher}
-import org.apache.activemq.apollo.broker.Broker
 import scala.Predef._
 
 class BrokerCreate {
@@ -189,7 +188,7 @@ class BrokerCreate {
 
   def write(source:String, target:File, filter:Boolean=false, text:Boolean=false, unixTarget:Boolean=false) = {
     if( target.exists && !force ) {
-      error("The file '%s' already exists.  Use --force to overwrite.".format(target))
+      sys.error("The file '%s' already exists.  Use --force to overwrite.".format(target))
     }
     if( filter || text ) {
 

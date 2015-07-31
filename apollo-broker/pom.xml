@@ -22,14 +22,14 @@
   <parent>
     <groupId>org.apache.activemq</groupId>
     <artifactId>apollo-scala</artifactId>
-    <version>99-trunk-SNAPSHOT</version>
+    <version>${apollo-version}</version>
     <relativePath>../apollo-scala</relativePath>
   </parent>
 
   <groupId>org.apache.activemq</groupId>
   <artifactId>apollo-broker</artifactId>
-  <version>99-trunk-SNAPSHOT</version>
-  <!-- <packaging>bundle</packaging> -->
+  <version>${apollo-version}</version>
+  <!--<packaging>bundle</packaging>-->
 
   <name>${project.artifactId}</name>
   <description>A reliable messaging server.</description>
@@ -42,13 +42,13 @@
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>apollo-dto</artifactId>
-      <version>99-trunk-SNAPSHOT</version>
+      <version>${apollo-version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>apollo-selector</artifactId>
-      <version>99-trunk-SNAPSHOT</version>
+      <version>${apollo-version}</version>
     </dependency>
 
     <dependency>
@@ -119,14 +119,14 @@
       <version>${scala-version}</version>
     </dependency>
     
-    <!-- Testing Dependencies -->
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>apollo-util</artifactId>
-      <version>99-trunk-SNAPSHOT</version>
-      <type>test-jar</type>
-      <scope>test</scope>
+      <scope>compile</scope>
+      <version>${apollo-version}</version>
     </dependency>
+
+    <!-- Testing Dependencies -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -135,7 +135,7 @@
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_${scala-version}</artifactId>
+      <artifactId>scalatest_${scala-binary-version}</artifactId>
       <version>${scalatest-version}</version>
       <scope>test</scope>
     </dependency>

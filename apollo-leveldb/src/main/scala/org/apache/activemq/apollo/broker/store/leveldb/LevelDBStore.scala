@@ -81,7 +81,7 @@ class LevelDBStore(val config: LevelDBStoreDTO) extends DelayingStoreSupport {
     try {
       client.store(uows)
     } catch {
-      case e =>
+      case e: Throwable =>
       warn(e, "Failure occured while storing units of work: "+e)
     } finally {
       dispatch_queue {

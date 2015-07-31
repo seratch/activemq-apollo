@@ -26,6 +26,7 @@ import java.nio.{MappedByteBuffer, ByteBuffer}
 import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.{ConcurrentLinkedQueue, ConcurrentHashMap, TimeUnit}
 import java.util.Comparator
+import scala.util.control._
 
 /**
  * <p>Tracks allocated space</p>
@@ -283,7 +284,7 @@ object ByteBufferReleaser {
 
           clean _
         } catch {
-          case _ =>
+          case NonFatal(_) =>
             def noop(buffer: ByteBuffer):Unit = { }
             noop _
         }

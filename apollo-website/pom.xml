@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.apache.activemq</groupId>
     <artifactId>apollo-project</artifactId>
-    <version>99-trunk-SNAPSHOT</version>
+    <version>${apollo-version}</version>
     <relativePath>..</relativePath>
   </parent>
   
@@ -39,18 +39,18 @@
   <dependencies>
 
     <dependency>
-      <groupId>org.fusesource.scalate</groupId>
-      <artifactId>scalate-wikitext_2.10</artifactId>
+      <groupId>org.scalatra.scalate</groupId>
+      <artifactId>scalate-wikitext_${scala-binary-version}</artifactId>
       <version>${scalate-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.fusesource.scalate</groupId>
-      <artifactId>scalate-page_2.10</artifactId>
+      <groupId>org.scalatra.scalate</groupId>
+      <artifactId>scalate-page_${scala-binary-version}</artifactId>
       <version>${scalate-version}</version>
     </dependency>
     <dependency>
-      <groupId>org.fusesource.scalamd</groupId>
-      <artifactId>scalamd_2.10</artifactId>
+      <groupId>org.scalatra.scalate</groupId>
+      <artifactId>scalamd_${scala-binary-version}</artifactId>
       <version>${scalamd-version}</version>
     </dependency>
     <dependency>
@@ -61,8 +61,8 @@
 
     <!-- testing -->
     <dependency>
-      <groupId>org.fusesource.scalate</groupId>
-      <artifactId>scalate-test_2.10</artifactId>
+      <groupId>org.scalatra.scalate</groupId>
+      <artifactId>scalate-test_${scala-binary-version}</artifactId>
       <version>${scalate-version}</version>
       <scope>test</scope>
     </dependency>
@@ -126,7 +126,7 @@
       </plugin>
 
       <plugin>
-        <groupId>org.fusesource.scalate</groupId>
+        <groupId>org.scalatra.scalate</groupId>
         <artifactId>maven-scalate-plugin_2.10</artifactId>
         <version>${scalate-version}</version>
         
@@ -293,7 +293,7 @@
       <build>
         <plugins>
           <plugin>
-            <groupId>org.fusesource.scalate</groupId>
+            <groupId>org.scalatra.scalate</groupId>
             <artifactId>maven-scalate-plugin_2.10</artifactId>
             <version>${scalate-version}</version>
             <executions>

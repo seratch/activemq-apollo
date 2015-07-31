@@ -18,13 +18,13 @@ package org.apache.activemq.apollo.util
 
 import java.util.concurrent.atomic.AtomicLong
 import org.slf4j.{Marker, MDC, Logger, LoggerFactory}
-import java.lang.{UnsupportedOperationException, Throwable, String}
 import collection.mutable.ListBuffer
 
 /**
  * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
  */
 object Log {
+
   val stack_trace_log = LoggerFactory.getLogger("stacktrace")
 
   def apply(clazz:Class[_]):Log = apply(clazz.getName.stripSuffix("$"))
@@ -255,6 +255,7 @@ trait Logging {
 }
 
 case class LogEntry(level:String, message:String, ts:Long=System.currentTimeMillis())
+
 class MemoryLogger(val next:Logger) extends Logger {
 
   var messages = ListBuffer[LogEntry]()
@@ -332,5 +333,48 @@ class MemoryLogger(val next:Logger) extends Logger {
   def debug(marker: Marker, format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
   def debug(format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def debug(format: String, arg: AnyRef) = throw new UnsupportedOperationException()
-  def debug(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()  
+  def debug(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
+
+  // slf4j-api 1.7
+  def warn(s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("warn", msg).warn(msg)
+  }
+  def warn(marker: Marker, s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("warn", msg).warn(msg)
+  }
+  def error(s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("error", msg).error(msg)
+  }
+  def error(marker: Marker, s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("error", msg).error(msg)
+  }
+  def debug(s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("debug", msg).debug(msg)
+  }
+  def debug(marker: Marker, s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("debug", msg).debug(msg)
+  }
+  def trace(s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("trace", msg).trace(msg)
+  }
+  def trace(marker: Marker, s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("trace", msg).trace(msg)
+  }
+  def info(s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("info", msg).info(msg)
+  }
+  def info(marker: Marker, s: String, objects: AnyRef*): Unit = {
+    val msg = s.format(objects)
+    add("info", msg).info(msg)
+  }
+
 }

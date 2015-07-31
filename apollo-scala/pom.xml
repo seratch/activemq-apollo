@@ -22,12 +22,12 @@
   <parent>
     <groupId>org.apache.activemq</groupId>
     <artifactId>apollo-project</artifactId>
-    <version>99-trunk-SNAPSHOT</version>
+    <version>${apollo-version}</version>
   </parent>
 
   <groupId>org.apache.activemq</groupId>
   <artifactId>apollo-scala</artifactId>
-  <version>99-trunk-SNAPSHOT</version>
+  <version>${apollo-version}</version>
   <packaging>pom</packaging>
 
   <name>${project.artifactId}</name>
@@ -88,6 +88,7 @@
                 <arg>-deprecation</arg>
                 <arg>-feature</arg>
               </args>
+              <!--
               <compilerPlugins>
                 <compilerPlugin>
                   <groupId>org.fusesource.jvmassert</groupId>
@@ -95,6 +96,7 @@
                   <version>1.4</version>
                 </compilerPlugin>
               </compilerPlugins>
+              -->
             </configuration>
           </execution>
           <execution>
@@ -112,6 +114,7 @@
                 <arg>-deprecation</arg>
                 <arg>-feature</arg>
               </args>
+              <!--
               <compilerPlugins>
                 <compilerPlugin>
                   <groupId>org.fusesource.jvmassert</groupId>
@@ -119,6 +122,7 @@
                   <version>1.4</version>
                 </compilerPlugin>
               </compilerPlugins>
+              -->
             </configuration>
           </execution>
         </executions>

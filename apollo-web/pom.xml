@@ -21,14 +21,14 @@
   <parent>
     <groupId>org.apache.activemq</groupId>
     <artifactId>apollo-scala</artifactId>
-    <version>99-trunk-SNAPSHOT</version>
+    <version>${apollo-version}</version>
     <relativePath>../apollo-scala</relativePath>
   </parent>
 
   <groupId>org.apache.activemq</groupId>
   <artifactId>apollo-web</artifactId>
   <packaging>jar</packaging>
-  <version>99-trunk-SNAPSHOT</version>
+  <version>${apollo-version}</version>
 
   <name>${project.artifactId}</name>
   <description>Adds web administration support.</description>
@@ -44,12 +44,17 @@
     <dependency>
       <groupId>org.apache.activemq</groupId>
       <artifactId>apollo-broker</artifactId>
-      <version>99-trunk-SNAPSHOT</version>
+      <version>${apollo-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>apollo-util</artifactId>
+      <version>${apollo-version}</version>
     </dependency>
 
     <!-- Web Framework APIs -->
     <dependency>
-      <groupId>org.fusesource.scalate</groupId>
+      <groupId>org.scalatra.scalate</groupId>
       <artifactId>scalate-core_2.10</artifactId>
       <version>${scalate-version}</version>
     </dependency>
@@ -111,7 +116,7 @@
 
     <!-- Testing -->
     <dependency>
-      <groupId>org.fusesource.scalate</groupId>
+      <groupId>org.scalatra.scalate</groupId>
       <artifactId>scalate-test_2.10</artifactId>
       <version>${scalate-version}</version>
       <scope>test</scope>
@@ -131,20 +136,6 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>apollo-broker</artifactId>
-      <version>99-trunk-SNAPSHOT</version>
-      <type>test-jar</type>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>apollo-util</artifactId>
-      <version>99-trunk-SNAPSHOT</version>
-      <type>test-jar</type>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
       <version>1.4</version>
@@ -159,7 +150,7 @@
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
-      <artifactId>scalatest_${scala-version}</artifactId>
+      <artifactId>scalatest_${scala-binary-version}</artifactId>
       <version>${scalatest-version}</version>
       <scope>test</scope>
     </dependency>
@@ -212,7 +203,7 @@
       </plugin>
 
       <plugin>
-        <groupId>org.fusesource.scalate</groupId>
+        <groupId>org.scalatra.scalate</groupId>
         <artifactId>maven-scalate-plugin_2.10</artifactId>
         <version>${scalate-version}</version>
         <executions>
