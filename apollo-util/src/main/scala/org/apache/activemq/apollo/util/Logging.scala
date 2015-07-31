@@ -267,71 +267,61 @@ class MemoryLogger(val next:Logger) extends Logger {
     }
     next
   }
-  
+
   def getName = next.getName
 
   def isWarnEnabled(marker: Marker) = true
   def isWarnEnabled = true
-  def warn(msg: String) = add("warn", msg).warn(msg) 
+  def warn(msg: String) = add("warn", msg).warn(msg)
   def warn(msg: String, t: Throwable) =  add("warn", msg).warn(msg, t)
   def warn(marker: Marker, msg: String, t: Throwable) = throw new UnsupportedOperationException()
   def warn(marker: Marker, msg: String) = throw new UnsupportedOperationException()
-  def warn(marker: Marker, format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def warn(marker: Marker, format: String, arg: AnyRef) = throw new UnsupportedOperationException()
   def warn(marker: Marker, format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
-  def warn(format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def warn(format: String, arg: AnyRef) = throw new UnsupportedOperationException()
   def warn(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
 
   def isTraceEnabled(marker: Marker) = true
   def isTraceEnabled = true
-  def trace(msg: String) = add("trace", msg).trace(msg) 
+  def trace(msg: String) = add("trace", msg).trace(msg)
   def trace(msg: String, t: Throwable) =  add("trace", msg).trace(msg, t)
   def trace(marker: Marker, msg: String, t: Throwable) = throw new UnsupportedOperationException()
   def trace(marker: Marker, msg: String) = throw new UnsupportedOperationException()
-  def trace(marker: Marker, format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def trace(marker: Marker, format: String, arg: AnyRef) = throw new UnsupportedOperationException()
   def trace(marker: Marker, format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
-  def trace(format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def trace(format: String, arg: AnyRef) = throw new UnsupportedOperationException()
-  def trace(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()  
-  
+  def trace(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
+
   def isInfoEnabled(marker: Marker) = true
   def isInfoEnabled = true
-  def info(msg: String) = add("info", msg).info(msg) 
+  def info(msg: String) = add("info", msg).info(msg)
   def info(msg: String, t: Throwable) =  add("info", msg).info(msg, t)
   def info(marker: Marker, msg: String, t: Throwable) = throw new UnsupportedOperationException()
   def info(marker: Marker, msg: String) = throw new UnsupportedOperationException()
-  def info(marker: Marker, format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def info(marker: Marker, format: String, arg: AnyRef) = throw new UnsupportedOperationException()
   def info(marker: Marker, format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
-  def info(format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def info(format: String, arg: AnyRef) = throw new UnsupportedOperationException()
-  def info(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()  
-  
+  def info(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
+
   def isErrorEnabled(marker: Marker) = true
   def isErrorEnabled = true
-  def error(msg: String) = add("error", msg).error(msg) 
+  def error(msg: String) = add("error", msg).error(msg)
   def error(msg: String, t: Throwable) =  add("error", msg).error(msg, t)
   def error(marker: Marker, msg: String, t: Throwable) = throw new UnsupportedOperationException()
   def error(marker: Marker, msg: String) = throw new UnsupportedOperationException()
-  def error(marker: Marker, format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def error(marker: Marker, format: String, arg: AnyRef) = throw new UnsupportedOperationException()
   def error(marker: Marker, format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
-  def error(format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def error(format: String, arg: AnyRef) = throw new UnsupportedOperationException()
-  def error(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()  
-  
+  def error(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
+
   def isDebugEnabled(marker: Marker) = true
   def isDebugEnabled = true
-  def debug(msg: String) = add("debug", msg).debug(msg) 
+  def debug(msg: String) = add("debug", msg).debug(msg)
   def debug(msg: String, t: Throwable) =  add("debug", msg).debug(msg, t)
   def debug(marker: Marker, msg: String, t: Throwable) = throw new UnsupportedOperationException()
   def debug(marker: Marker, msg: String) = throw new UnsupportedOperationException()
-  def debug(marker: Marker, format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def debug(marker: Marker, format: String, arg: AnyRef) = throw new UnsupportedOperationException()
   def debug(marker: Marker, format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
-  def debug(format: String, argArray: Array[AnyRef]) = throw new UnsupportedOperationException()
   def debug(format: String, arg: AnyRef) = throw new UnsupportedOperationException()
   def debug(format: String, arg1: AnyRef, arg2: AnyRef) = throw new UnsupportedOperationException()
 
